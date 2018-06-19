@@ -19,7 +19,9 @@
   "main": "./core/index",
   "scripts": {
     "start": "node index",
-    "test": "grunt validate --verbose"
+    "test": "grunt validate --verbose",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": "^4.2.0 || ^6.5.0"
@@ -59,7 +61,7 @@
     "intl-messageformat": "1.3.0",
     "jsonpath": "0.2.9",
     "knex": "0.12.5",
-    "knex-migrator": "2.0.7",
+    "knex-migrator": "3.1.5",
     "lodash": "4.17.4",
     "mobiledoc-html-renderer": "0.3.1",
     "moment": "2.17.1",
@@ -83,7 +85,8 @@
     "unidecode": "0.1.8",
     "uuid": "3.0.0",
     "validator": "6.2.1",
-    "xml": "1.0.1"
+    "xml": "1.0.1",
+    "snyk": "^1.83.0"
   },
   "optionalDependencies": {
     "sqlite3": "3.1.8"
@@ -153,5 +156,6 @@
       "grunt-subgrunt",
       "grunt-update-submodules"
     ]
-  }
+  },
+  "snyk": true
 }
